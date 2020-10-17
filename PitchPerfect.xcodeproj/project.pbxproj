@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D73E6BE252EAE4B00297509 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D73E6BD252EAE4B00297509 /* PlaySoundsViewController+Audio.swift */; };
 		8D884AB525233D59001DE6AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D884AB425233D59001DE6AB /* AppDelegate.swift */; };
 		8D884AB725233D59001DE6AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D884AB625233D59001DE6AB /* SceneDelegate.swift */; };
 		8D884AB925233D59001DE6AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D884AB825233D59001DE6AB /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D73E6BD252EAE4B00297509 /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
 		8D884AB125233D59001DE6AB /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D884AB425233D59001DE6AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D884AB625233D59001DE6AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				8D884AB825233D59001DE6AB /* ViewController.swift */,
 				8D884ABA25233D59001DE6AB /* Main.storyboard */,
 				8D884ABD25233D5B001DE6AB /* Assets.xcassets */,
+				8D73E6BD252EAE4B00297509 /* PlaySoundsViewController+Audio.swift */,
 				8D884ABF25233D5B001DE6AB /* LaunchScreen.storyboard */,
 				8D884AC225233D5B001DE6AB /* Info.plist */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D73E6BE252EAE4B00297509 /* PlaySoundsViewController+Audio.swift in Sources */,
 				8D884AB925233D59001DE6AB /* ViewController.swift in Sources */,
 				8D884AB525233D59001DE6AB /* AppDelegate.swift in Sources */,
 				8D884AD62529FE7B001DE6AB /* PlaySoundsViewController.swift in Sources */,

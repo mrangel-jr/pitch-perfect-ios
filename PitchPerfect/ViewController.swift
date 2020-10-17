@@ -20,18 +20,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        stopRecordingButton.isEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        configureUI(false)
     }
     
     @IBAction func recordAudio(_ sender: Any) {
-        recordButton.isEnabled = false
-        stopRecordingButton.isEnabled = true
-        recordLabel.text = "Record in progress"
+        configureUI(true)
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
@@ -49,9 +46,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecording(_ sender: Any) {
-        recordButton.isEnabled = true
-        stopRecordingButton.isEnabled = false
-        recordLabel.text = "Tap to Record"
+        configureUI(false)
         
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
@@ -68,10 +63,16 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func prepare(for segue:UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "stopRecording" {
-            let playSoundsVC : PlaySoundsViewController = segue.destination as! PlaySoundsViewController
+            let playSoundsViewController  : PlaySoundsViewController = segue.destination as! PlaySoundsViewController
             let recordedAudioURL = sender as! URL
-            playSoundsVC.recordedAudioURL = recordedAudioURL
+            playSoundsViewController.recordedAudioURL = recordedAudioURL
         }
+    }
+    
+    func configureUI(_ isRecording:Bool) {
+        recordButton.isEnabled = !isRecording
+        stopRecordingButton.isEnabled = isRecording
+        recordLabel.text = isRecording ? "Record in progress" : "Tap to Record"
     }
     
 }
